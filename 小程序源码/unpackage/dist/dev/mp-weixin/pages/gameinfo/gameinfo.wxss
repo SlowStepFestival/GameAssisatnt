@@ -1,0 +1,48 @@
+
+.content{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	        flex-direction: column;
+}
+.gameIntro{
+	font-size: 40rpx;
+}
+.timeRealease{
+	margin-bottom: 20rpx;
+}
+.title{
+	text-align: center;
+	font-size:40rpx;
+	margin-bottom: 0rpx;
+	border-bottom: 5rpx solid #000000;
+}
+.images{
+	margin-top: 5rpx;
+	margin-bottom: 5rpx;
+	border-bottom: 5rpx solid #000000;
+	margin: 0 auto;
+	width: 95%;
+}
+.tag{
+	color: #DD524D;
+}
+.introduction{
+}
+.buttonBox{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	        flex-direction: row;
+	font-size: 40px;
+}
+page{
+	background:#EEEEEE;
+}
+
