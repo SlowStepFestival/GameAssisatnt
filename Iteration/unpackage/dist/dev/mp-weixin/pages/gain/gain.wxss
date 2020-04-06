@@ -1,0 +1,40 @@
+
+.title
+{
+	text-align: center;
+	font-size:40rpx;
+	margin-bottom: 0rpx;
+	border-bottom: 5rpx solid #000000;
+}
+.uni-media-list-body
+	{
+		height:auto;
+}
+.uni-media-list-text-top
+	{
+}
+.inv-h-w
+	{
+		height: 80rpx;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: flex;
+}
+.inv-h
+	{
+		font-size: 30rpx;
+		-webkit-box-flex: 1;
+		-webkit-flex: 1;
+		        flex: 1;
+		text-align: center;
+		color:#D8D8D8;
+		height: 80rpx;
+		line-height: 80rpx;
+}
+.inv-h-se
+	{
+		color: #000000;
+		border-bottom: 1rpx solid #000000
+}
+
+

@@ -1,0 +1,5 @@
+<view><component-search-bar vue-id="1" isnavigator="false" data-event-opts="{{[['^searchinput',[['onSearchInputEvent']]]]}}" bind:searchinput="__e" bind:__l="__l"></component-search-bar><view class="uni-list"><block wx:for="{{searchGameList}}" wx:for-item="item" wx:for-index="index" wx:key="index"><view class="uni-list-cell" hover-class="uni-list-cell-hover" data-gameid="{{item.gameId}}" data-event-opts="{{[['tap',[['opengameinfo',['$event']]]]]}}" bindtap="__e"><view class="uni-media-list"><image class="uni-media-list-logo" src="{{item.logoUrl}}"></image><view class="uni-media-list-body"><view class="uni-media-list-text-top">{
+						{item.name}
+					}</view><view class="uni-media-list-text-bottom uni-ellipsis">{
+						{item.price}
+					}</view></view></view></view></block></view></view>

@@ -1,0 +1,19 @@
+<view><component-search-bar vue-id="1" isnavigator="true" bind:__l="__l"></component-search-bar><view class="inv-h-w"><view data-event-opts="{{[['tap',[['e0',['$event']]]]]}}" class="{{['inv-h',Inv==1?'inv-h-se':'']}}" bindtap="__e">最受欢迎</view><view data-event-opts="{{[['tap',[['e1',['$event']]]]]}}" class="{{['inv-h',Inv==2?'inv-h-se':'']}}" bindtap="__e">优惠促销</view><view data-event-opts="{{[['tap',[['e2',['$event']]]]]}}" class="{{['inv-h',Inv==3?'inv-h-se':'']}}" bindtap="__e">最新发布</view></view><view hidden="{{!(Inv==1)}}" class="page1"><view class="uni-list"><block wx:for="{{gamelist1}}" wx:for-item="item" wx:for-index="index" wx:key="index"><view class="uni-list-cell" hover-class="uni-list-cell-hover" data-gameid="{{item.gameId}}" data-event-opts="{{[['tap',[['opengameinfo',['$event']]]]]}}" bindtap="__e"><view class="uni-media-list"><image class="uni-media-list-logo" src="{{item.logoUrl}}"></image><view class="uni-media-list-body"><view class="uni-media-list-text-top">{
+								{item.name}
+							}</view><view class="uni-media-list-text-bottom uni-ellipsis">售价：{
+									{item.price}
+								}</view><view class="discount">折扣：{
+									{item.discount}
+								}%</view></view></view></view></block></view></view><view hidden="{{!(Inv==2)}}" class="page2"><view class="uni-list"><block wx:for="{{gamelist2}}" wx:for-item="item" wx:for-index="index" wx:key="index"><view class="uni-list-cell" hover-class="uni-list-cell-hover" data-gameid="{{item.gameId}}" data-event-opts="{{[['tap',[['opengameinfo',['$event']]]]]}}" bindtap="__e"><view class="uni-media-list"><image class="uni-media-list-logo" src="{{item.logoUrl}}"></image><view class="uni-media-list-body"><view class="uni-media-list-text-top">{
+								{item.name}
+							}</view><view class="uni-media-list-text-bottom uni-ellipsis">售价：{
+									{item.price}
+								}</view><view class="discount">折扣：{
+									{item.discount}
+								}%</view></view></view></view></block></view></view><view hidden="{{!(Inv==3)}}" class="page3"><view class="uni-list"><block wx:for="{{gamelist3}}" wx:for-item="item" wx:for-index="index" wx:key="index"><view class="uni-list-cell" hover-class="uni-list-cell-hover" data-gameid="{{item.gameId}}" data-event-opts="{{[['tap',[['opengameinfo',['$event']]]]]}}" bindtap="__e"><view class="uni-media-list"><image class="uni-media-list-logo" src="{{item.logoUrl}}"></image><view class="uni-media-list-body"><view class="uni-media-list-text-top">{
+								{item.name}
+							}</view><view class="uni-media-list-text-bottom uni-ellipsis">售价：{
+									{item.price}
+								}</view><view class="discount">折扣：{
+									{item.discount}
+								}%</view></view></view></view></block></view></view></view>
