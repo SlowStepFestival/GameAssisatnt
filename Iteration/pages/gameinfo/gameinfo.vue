@@ -1,42 +1,32 @@
 <template>
 	<view class="content">
 		<view class="title">
-			{
-				{title}
-			}
+			{{title}}
 		</view>
 		<image class="images" :src="imageUrl">
 		</image>
 		<view class="tag">
-			{
-				{tag}
-			}
+			{{tag}}
 		</view>
 		<view class="gameIntro">
 			游戏简介
 		</view>
 		<view class="introduction">
-			{
-				{introduction}
-			}
+			{{introduction}}
 		</view>
 		<view class="timeRealease">
-			{
-				{timeRealease}
-			}
+			{{timeRealease}}
 		</view>
 		
 		<view class="buttonBox">
 			<button class="gain" @tap="toGain">
-				成就
+				成就列表
 			</button>
-			<button class="discount">
+			<!-- <button class="discount" @tap="discount">
 				折扣
-			</button>
+			</button> -->
 			<button class="subscribe" @tap="onSub">
-			{
-				{subContent}
-			}
+				{{subContent}}
 			</button>
 		</view>
 		
@@ -44,10 +34,8 @@
 	</view>
 </template>
 <script>
-	export default 
-	{
-		onLoad(e) 
-		{
+	export default {
+		onLoad(e) {
 			this.theGameID=e.gameid;
 			console.log("注意这一条");
 			console.log(this.theGameID);
@@ -68,35 +56,27 @@
 				complete: () => {}
 			});
 		},
-		data() 
-		{
-			return 
-			{
-				theGameID:'';
-				title:'';
-				imageUrl:'';
-				introduction:'';
-				timeRealease:'';
-				tag:'';
+		data() {
+			return {
+				theGameID:'',
+				title:'',
+				imageUrl:'',
+				introduction:'',
+				timeRealease:'',
+				tag:'',
 				subContent:'关注'
 				
 			}
 		},
-		methods: 
-		{
-			onSub()
-			{
-				if (this.subContent=='关注')
-				{
-					this.subContent='关注√';
-				}
-				else
-				{
+		methods: {
+			onSub(){
+				if (this.subContent=='关注'){
+					this.subContent='已关注';
+				}else{
 					this.subContent='关注';
 				}
 			},
-			toGain()
-			{
+			toGain(){
 				uni.navigateTo({
 					url: '../gain/gain?gameid='+this.theGameID,
 					success: res => {},
@@ -104,6 +84,13 @@
 					complete: () => {}
 				});
 			}
+			// discount(){
+			// 	if (this.subContent=='折扣'){
+			// 		this.subContent=this.discount;
+			// 	}else{
+			// 		this.subContent='折扣';
+			// 	}
+			// }
 		}
 	}
 </script>

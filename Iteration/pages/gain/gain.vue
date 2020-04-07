@@ -12,14 +12,10 @@
 					</image>
 					<view class="uni-media-list-body">
 						<view class="uni-media-list-text-top">
-							{
-								{item.achievementName}
-							}
+							{{item.achievementName}}
 						</view>
 						<view class="uni-media-list-text-bottom uni-ellipsis">
-							{
-								{item.profile}
-							}
+							{{item.profile}}
 						</view>
 					</view>
 				</view>
@@ -33,10 +29,8 @@
 </template>
 
 <script>
-	export default
-	{
-		onLoad(e) 
-		{
+	export default {
+		onLoad(e) {
 			uni.request({
 				url: 'http://47.103.206.26:8080/miniprogram/list/achievements?gameId='+e.gameid,
 				method: 'GET',
@@ -49,10 +43,8 @@
 				complete: () => {}
 			});
 		},
-		data() 
-		{
-			return 
-			{
+		data() {
+			return {
 				list:[]
 			}
 		},

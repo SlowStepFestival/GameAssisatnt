@@ -12,9 +12,7 @@
 					</image>
 					<view class="uni-media-list-body">
 						<view class="uni-media-list-text-top">
-						{
-							{item.name}
-						}
+						{{item.name}}
 						</view>
 						<view class="uni-media-list-text-bottom uni-ellipsis">
 							售价：{{item.price}}
@@ -32,10 +30,8 @@
 <script>
 	export default 
 	{
-		data() 
-		{
-			return 
-			{
+		data() {
+			return {
 				gamelist3:[]
 			}
 		},

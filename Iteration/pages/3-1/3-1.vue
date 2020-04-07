@@ -25,22 +25,17 @@
 <script>
 	export default 
 	{
-		data() 
-		{
-			return 
-			{
+		data() {
+			return {
 				gamelist1:[]
 			}
 		},
-		onLoad:function()
-		{
-			uni.request(
-			{
+		onLoad:function(){
+			uni.request({
 				url: 'http://47.103.206.26:8080/miniprogram/list/hot/games',
 				method: 'GET',
 				data: {},
-				success: res => 
-				{
+				success: res => {
 					this.gamelist1=res.data.gameList;
 				},
 				fail: () => {},
@@ -48,8 +43,7 @@
 			});
 			
 		},
-		methods: 
-		{
+		methods: {
 			opengameinfo(e){
 				var gameid=e.currentTarget.dataset.gameid;
 				uni.navigateTo({

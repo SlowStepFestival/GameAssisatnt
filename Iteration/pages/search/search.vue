@@ -10,14 +10,10 @@
 					</image>
 					<view class="uni-media-list-body">
 						<view class="uni-media-list-text-top">
-						{
-							{item.name}
-						}
+						{{item.name}}
 						</view>
 						<view class="uni-media-list-text-bottom uni-ellipsis">
-						{
-							{item.price}
-						}
+						{{item.price}}
 						</view>
 					</view>
 				</view>
@@ -30,23 +26,17 @@
 <script>
 	import componentSearchBar from "../../components/searchbar/searchbar.vue";
 	
-	export default 
-	{
-		data() 
-		{
-			return 
-			{
+	export default {
+		data() {
+			return {
 				searchGameList:[]
 			}
 		},
-		components:
-		{
+		components:{
 				componentSearchBar
 			},
-		methods: 
-		{
-			onSearchInputEvent:function(event)
-			{
+		methods: {
+			onSearchInputEvent:function(event){
 				console.log(event)
 				uni.request({
 					url:'http://47.103.206.26:8080/miniprogram/list/games?name='+event,
@@ -61,8 +51,7 @@
 					}
 				})
 			},
-			opengameinfo(e)
-			{
+			opengameinfo(e){
 				var gameid=e.currentTarget.dataset.gameid;
 				uni.navigateTo({
 					url: '../gameinfo/gameinfo?gameid='+gameid

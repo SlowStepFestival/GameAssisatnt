@@ -22,19 +22,13 @@
 						</image>
 						<view class="uni-media-list-body">
 							<view class="uni-media-list-text-top">
-							{
-								{item.name}
-							}
+								{{item.name}}
 							</view>
 							<view class="uni-media-list-text-bottom uni-ellipsis">
-								售价：{
-									{item.price}
-								}
+								售价：{{item.price}}
 							</view>
 							<view class="discount">
-								折扣：{
-									{item.discount}
-								}%
+								折扣：{{item.discount}}%
 							</view> 
 						</view>
 					</view>
@@ -51,19 +45,13 @@
 						</image>
 						<view class="uni-media-list-body">
 							<view class="uni-media-list-text-top">
-							{
-								{item.name}
-							}
+							{{item.name}}
 							</view>
 							<view class="uni-media-list-text-bottom uni-ellipsis">
-								售价：{
-									{item.price}
-								}
+								售价：{{item.price}}
 							</view>
 							<view class="discount">
-								折扣：{
-									{item.discount}
-								}%
+								折扣：{{item.discount}}%
 							</view>
 						</view>
 					</view>
@@ -79,19 +67,13 @@
 						</image>
 						<view class="uni-media-list-body">
 							<view class="uni-media-list-text-top">
-							{
-								{item.name}
-							}
+							{{item.name}}
 							</view>
 							<view class="uni-media-list-text-bottom uni-ellipsis">
-								售价：{
-									{item.price}
-								}
+								售价：{{item.price}}
 								</view>
 							<view class="discount">
-								折扣：{
-									{item.discount}
-								}%
+								折扣：{{item.discount}}%
 							</view>
 						</view>
 					</view>
@@ -116,26 +98,21 @@
 
 <script>
 	import componentSearchBar from "../../components/searchbar/searchbar.vue";
-	export default 
-	{
-		data() 
-		{
-			return 
-			{
-				gamelist:[];
-				gamelist1:[];
-				gamelist2:[];
-				gamelist3:[];
-				gamelist4:[];
+	export default {
+		data() {
+			return {
+				gamelist:[],
+				gamelist1:[],
+				gamelist2:[],
+				gamelist3:[],
+				gamelist4:[],
 				Inv:1
 			}
 		},
-		components:
-		{
-			componentSearchBar
-		},
-		onLoad:function()
-		{
+		components:{
+				componentSearchBar
+			},
+		onLoad:function(){
 			// uni.request({
 			// 	url: 'http://172.19.241.59:8080/miniprogram/list/games',
 			// 	method: 'GET',
@@ -158,7 +135,6 @@
 				fail: () => {},
 				complete: () => {}
 			});
-			
 			uni.request({
 				url: 'http://47.103.206.26:8080/miniprogram/list/specials/games',
 				method: 'GET',
@@ -169,7 +145,6 @@
 				fail: () => {},
 				complete: () => {}
 			});
-			
 			uni.request({
 				url: 'http://47.103.206.26:8080/miniprogram/list/release/games',
 				method: 'GET',
@@ -181,7 +156,6 @@
 				complete: () => {}
 			});
 		},
-		
 		methods: {
 			opengameinfo(e){
 				

@@ -22,6 +22,21 @@
 									<image mode = "widthFix" src="../../static/pictures/recommend3.jpg">
 								</view>
 							</swiper-item>
+							<swiper-item>
+								<view class="swiper-item4" @tap="pic4dot1">
+									<image mode = "widthFix" src="../../static/pictures/recommend4.jpg">
+								</view>
+							</swiper-item>
+							<swiper-item>
+								<view class="swiper-item5" @tap="pic5dot1">
+									<image mode = "widthFix" src="../../static/pictures/recommend5.jpg">
+								</view>
+							</swiper-item>
+							<swiper-item>
+								<view class="swiper-item6" @tap="pic6dot1">
+									<image mode = "widthFix" src="../../static/pictures/recommend6.jpg">
+								</view>
+							</swiper-item>
 						</swiper>
 					</view>
 				</view>
@@ -180,27 +195,21 @@
 
 <script>
 	import componentSearchBar from "../../components/searchbar/searchbar.vue";
-	export default 
-	{
-		data() 
-		{
-			return 
-			{
-				background: ['color1', 'color2', 'color3'];
-				            indicatorDots: true;
-				            autoplay: true;
-				            interval: 2000;
+	export default {
+		data() {
+			return {
+				background: ['color1', 'color2', 'color3'],
+				            indicatorDots: true,
+				            autoplay: true,
+				            interval: 2000,
 				            duration: 500
 			}
 		},
-		components:
-		{
+		components:{
 				componentSearchBar
 			},
-		methods: 
-		{
-			on3dot1()
-			{
+		methods: {
+			on3dot1(){
 				uni.navigateTo({
 					url: '../3-1/3-1',
 					success: res => {},
@@ -208,9 +217,7 @@
 					complete: () => {}
 				});
 			},
-			
-			on3dot2()
-			{
+			on3dot2(){
 				uni.navigateTo({
 					url: '../3-2/3-2',
 					success: res => {},
@@ -218,9 +225,7 @@
 					complete: () => {}
 				});
 			},
-			
-			on3dot3()
-			{
+			on3dot3(){
 				uni.navigateTo({
 					url: '../3-3/3-3',
 					success: res => {},
@@ -228,9 +233,7 @@
 					complete: () => {}
 				});
 			},
-			
-			on3dot4()
-			{
+			on3dot4(){
 				uni.navigateTo({
 					url: '../3-4/3-4',
 					success: res => {},
@@ -238,9 +241,7 @@
 					complete: () => {}
 				});
 			},
-			
-			tapRecommendation()
-			{
+			tapRecommendation(){
 				uni.navigateTo({
 					url: '../3-1/3-1',
 					success: res => {},
@@ -248,9 +249,7 @@
 					complete: () => {}
 				});
 			},
-			
-			tapActivity()
-			{
+			tapActivity(){
 				uni.navigateTo({
 					url: '../3-2/3-2',
 					success: res => {},
@@ -258,9 +257,7 @@
 					complete: () => {}
 				});
 			},
-			
-			TapSales()
-			{
+			TapSales(){
 				uni.navigateTo({
 					url: '../3-3/3-3',
 					success: res => {},
@@ -268,9 +265,7 @@
 					complete: () => {}
 				});
 			},
-			
-			tapNew()
-			{
+			tapNew(){
 				uni.navigateTo({
 					url: '../3-4/3-4',
 					success: res => {},
@@ -278,9 +273,7 @@
 					complete: () => {}
 				});
 			},
-			
-			pic1dot1()
-			{
+			pic1dot1(){
 				uni.navigateTo({
 					url: '../gameinfo/gameinfo?gameid=730',
 					success: res => {},
@@ -288,9 +281,7 @@
 					complete: () => {}
 				});
 			},
-			
-			pic1dot2()
-			{
+			pic1dot2(){
 				uni.navigateTo({
 					url: '../gameinfo/gameinfo?gameid=578080',
 					success: res => {},
@@ -298,9 +289,7 @@
 					complete: () => {}
 				});
 			},
-			
-			pic2dot1()
-			{
+			pic2dot1(){
 				uni.navigateTo({
 					url: '../gameinfo/gameinfo?gameid=648350',
 					success: res => {},
@@ -308,9 +297,7 @@
 					complete: () => {}
 				});
 			},
-			
-			pic2dot2()
-			{
+			pic2dot2(){
 				uni.navigateTo({
 					url: '../gameinfo/gameinfo?gameid=454650',
 					success: res => {},
@@ -318,9 +305,7 @@
 					complete: () => {}
 				});
 			},
-			
-			pic3dot1()
-			{
+			pic3dot1(){
 				uni.navigateTo({
 					url: '../gameinfo/gameinfo?gameid=1066780',
 					success: res => {},
@@ -328,9 +313,31 @@
 					complete: () => {}
 				});
 			},
-			
-			pic3dot2()
-			{
+			pic3dot2(){
+				uni.navigateTo({
+					url: '../gameinfo/gameinfo?gameid=1072420',
+					success: res => {},
+					fail: () => {},
+					complete: () => {}
+				});
+			},
+			pic4dot1(){
+				uni.navigateTo({
+					url: '../gameinfo/gameinfo?gameid=578080',
+					success: res => {},
+					fail: () => {},
+					complete: () => {}
+				});
+			},
+			pic5dot1(){
+				uni.navigateTo({
+					url: '../gameinfo/gameinfo?gameid=454650',
+					success: res => {},
+					fail: () => {},
+					complete: () => {}
+				});
+			},
+			pic6dot1(){
 				uni.navigateTo({
 					url: '../gameinfo/gameinfo?gameid=1072420',
 					success: res => {},

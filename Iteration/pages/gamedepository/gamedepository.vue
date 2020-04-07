@@ -7,21 +7,16 @@
 
 <script>
 	import componentSearchBar from "../../components/searchbar/searchbar.vue";
-	export default 
-	{
-		data() 
-		{
-			return 
-			{
+	export default {
+		data() {
+			return {
 				
 			}
 		},
-		components:
-		{
-			componentSearchBar
-		},
-		methods: 
-		{
+		components:{
+				componentSearchBar
+			},
+		methods: {
 			
 		}
 	}
